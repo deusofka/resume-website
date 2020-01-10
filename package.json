@@ -1,0 +1,15 @@
+{
+  "name": "Code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "npx node-sass sass/ -o dist/css/ --recursive"
+  },
+  "keywords": [],
+  "author": "Vimal Patel",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.13.0"
+  }
+}
