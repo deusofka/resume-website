@@ -8,6 +8,7 @@ $content-width: 1280px;
 // font
 $font-stack: "Dosis", sans-serif;
 $logo-size: 2rem;
+$footer-icon-size: 1.75rem;
 $nav-item-size: 1rem;
 $heading-l: 3rem;
 $heading-m: 2rem;
@@ -21,10 +22,19 @@ $showcase-height: 89.5vh;
 $color-dark: #202020;
 $color-dark-secondary: #262626;
 $color-text: #6f6f6f;
+$color-text-footer: #ffffff93;
 $color-light: #ffffff;
 
 $color-theme: #ff000064;
 $color-theme-btn: #ff000064;
+$color-theme-secondary: #00ff0046;
+$color-theme-btn-secondary: #00ff0046;
+$color-theme-tertiary: #0000ff74;
+$color-theme-btn-tertiary: #0000ff74;
+$color-theme-quarternary: #00ffce64;
+$color-theme-btn-quarternary: #00ffce64;
+$color-theme-quinary: #4500ff64;
+$color-theme-btn-quinary: #4500ff64;
 /********************
     EXTENDS
 *********************/
@@ -41,20 +51,16 @@ $color-theme-btn: #ff000064;
   display: flex;
 }
 
-%centering-box {
+%vertical-box {
   display: flex;
   flex-direction: column;
+}
+
+%centering-box {
+  @extend %vertical-box;
   justify-content: center;
   align-items: center;
   align-content: center;
-}
-
-%vertical-box {
-  display: flex;
-}
-
-%centering-box {
-  display: flex;
 }
 
 /********************
@@ -72,25 +78,12 @@ body {
   color: $color-light;
 }
 
-//Theme button colors
-section:nth-of-type(2) {
-  a.down {
-    background-color: $color-theme-btn;
-  }
-}
-section:nth-of-type(3) {
-  a.down {
-    background-color: $color-theme-btn;
-  }
-}
-
 li {
   list-style: none;
 }
 
 p {
   font-size: $txt-m;
-  // line-height: 1rem;
 }
 
 .btn {
@@ -119,6 +112,8 @@ header {
   @extend %content;
   position: sticky;
   top: 0;
+  z-index: 10;
+  background-color: $color-dark;
   nav {
     padding: 1rem 0;
     @extend %box;
@@ -169,20 +164,63 @@ main {
 
     section {
       height: $showcase-height;
-      background-color: $color-dark-secondary;
+
+      //Theme colors
+      &:nth-of-type(1),
+      &:nth-of-type(4),
+      &:nth-of-type(5),
+      &:nth-of-type(8),
+      &:nth-of-type(9) {
+        background-color: $color-dark-secondary;
+        color: $color-text;
+      }
+      &:nth-of-type(2) {
+        background-color: $color-theme;
+        a.down {
+          background-color: $color-theme-btn;
+        }
+      }
+      &:nth-of-type(3) {
+        background-color: $color-theme-secondary;
+        a.down {
+          background-color: $color-theme-btn-secondary;
+        }
+      }
+      &:nth-of-type(6) {
+        background-color: $color-theme-tertiary;
+        a.down {
+          background-color: $color-theme-btn-tertiary;
+        }
+      }
+      &:nth-of-type(7) {
+        background-color: $color-theme-quarternary;
+        a.down {
+          background-color: $color-theme-btn-quarternary;
+        }
+      }
+      &:nth-of-type(10) {
+        background-color: $color-theme-quinary;
+        a.down {
+          background-color: $color-theme-btn-quinary;
+        }
+      }
+
       /********************
-      SECTION 1
+          ABOUT
       *********************/
       &:nth-of-type(1) {
         @extend %centering-box;
-        color: $color-text;
         padding: 2rem;
         img {
           width: 3.5rem;
         }
       }
-      &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(5), &:nth-of-type(6), &:nth-of-type(8) , &:nth-of-type(9) {
-        background-color: $color-theme;
+      &:nth-of-type(2),
+      &:nth-of-type(3),
+      &:nth-of-type(5),
+      &:nth-of-type(6),
+      &:nth-of-type(7),
+      &:nth-of-type(10) {
         @extend %centering-box;
         position: relative;
         h2 {
@@ -194,8 +232,7 @@ main {
         div.btn-container {
           position: absolute;
           left: 0;
-          @extend %box;
-          flex-direction: column;
+          @extend %vertical-box;
           justify-content: center;
 
           a.down {
@@ -203,6 +240,50 @@ main {
               color: $color-light;
             }
           }
+        }
+      }
+
+      &:nth-of-type(3),
+      &:nth-of-type(6),
+      &:nth-of-type(9) {
+        div.btn-container {
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+/********************
+    FOOTER
+*********************/
+footer {
+  @extend %content;
+  @extend %vertical-box;
+  justify-content: flex-end;
+  padding: 2rem;
+  height: $showcase-height;
+  background: url(../img/footer-image.jpg);
+  background-size: cover;
+  background-position: 0 48.5%;
+  color: $color-text-footer;
+
+  div {
+    width: fit-content;
+    p {
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+    div#social-links {
+      @extend %box;
+      width: 90%;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+
+      a {
+        i {
+          color: $color-text-footer;
+          font-size: $footer-icon-size;
         }
       }
     }

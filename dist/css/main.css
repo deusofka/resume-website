@@ -4,23 +4,22 @@
 /********************
     EXTENDS
 *********************/
-header, main {
+header, main, footer {
   max-width: 1280px;
   width: 90%;
   margin: auto; }
 
-header nav, header nav ul, main div#sections section:nth-of-type(2) div.btn-container, main div#sections section:nth-of-type(3) div.btn-container, main div#sections section:nth-of-type(5) div.btn-container, main div#sections section:nth-of-type(6) div.btn-container, main div#sections section:nth-of-type(8) div.btn-container, main div#sections section:nth-of-type(9) div.btn-container {
+header nav, header nav ul, footer div div#social-links {
   display: flex; }
 
-main div.centering-container, main div#sections section:nth-of-type(1), main div#sections section:nth-of-type(2), main div#sections section:nth-of-type(3), main div#sections section:nth-of-type(5), main div#sections section:nth-of-type(6), main div#sections section:nth-of-type(8), main div#sections section:nth-of-type(9) {
+main div.centering-container, main div#sections section:nth-of-type(1), main div#sections section:nth-of-type(2), main div#sections section:nth-of-type(3), main div#sections section:nth-of-type(5), main div#sections section:nth-of-type(6), main div#sections section:nth-of-type(7), main div#sections section:nth-of-type(10), main div#sections section:nth-of-type(2) div.btn-container, main div#sections section:nth-of-type(3) div.btn-container, main div#sections section:nth-of-type(5) div.btn-container, main div#sections section:nth-of-type(6) div.btn-container, main div#sections section:nth-of-type(7) div.btn-container, main div#sections section:nth-of-type(10) div.btn-container, footer {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; }
+
+main div.centering-container, main div#sections section:nth-of-type(1), main div#sections section:nth-of-type(2), main div#sections section:nth-of-type(3), main div#sections section:nth-of-type(5), main div#sections section:nth-of-type(6), main div#sections section:nth-of-type(7), main div#sections section:nth-of-type(10) {
   justify-content: center;
   align-items: center;
   align-content: center; }
-
-main div.centering-container, main div#sections section:nth-of-type(1), main div#sections section:nth-of-type(2), main div#sections section:nth-of-type(3), main div#sections section:nth-of-type(5), main div#sections section:nth-of-type(6), main div#sections section:nth-of-type(8), main div#sections section:nth-of-type(9) {
-  display: flex; }
 
 /********************
     UTILITY
@@ -34,12 +33,6 @@ body {
   font-family: "Dosis", sans-serif;
   background-color: #202020;
   color: #ffffff; }
-
-section:nth-of-type(2) a.down {
-  background-color: #ff000064; }
-
-section:nth-of-type(3) a.down {
-  background-color: #ff000064; }
 
 li {
   list-style: none; }
@@ -64,7 +57,9 @@ p {
 *********************/
 header {
   position: sticky;
-  top: 0; }
+  top: 0;
+  z-index: 10;
+  background-color: #202020; }
   header nav {
     padding: 1rem 0;
     justify-content: space-between; }
@@ -97,26 +92,71 @@ main {
     grid-gap: 5px; }
     main div#sections section {
       height: 89.5vh;
-      background-color: #262626;
       /********************
-      SECTION 1
+          ABOUT
       *********************/ }
+      main div#sections section:nth-of-type(1), main div#sections section:nth-of-type(4), main div#sections section:nth-of-type(5), main div#sections section:nth-of-type(8), main div#sections section:nth-of-type(9) {
+        background-color: #262626;
+        color: #6f6f6f; }
+      main div#sections section:nth-of-type(2) {
+        background-color: #ff000064; }
+        main div#sections section:nth-of-type(2) a.down {
+          background-color: #ff000064; }
+      main div#sections section:nth-of-type(3) {
+        background-color: #00ff0046; }
+        main div#sections section:nth-of-type(3) a.down {
+          background-color: #00ff0046; }
+      main div#sections section:nth-of-type(6) {
+        background-color: #0000ff74; }
+        main div#sections section:nth-of-type(6) a.down {
+          background-color: #0000ff74; }
+      main div#sections section:nth-of-type(7) {
+        background-color: #00ffce64; }
+        main div#sections section:nth-of-type(7) a.down {
+          background-color: #00ffce64; }
+      main div#sections section:nth-of-type(10) {
+        background-color: #4500ff64; }
+        main div#sections section:nth-of-type(10) a.down {
+          background-color: #4500ff64; }
       main div#sections section:nth-of-type(1) {
-        color: #6f6f6f;
         padding: 2rem; }
         main div#sections section:nth-of-type(1) img {
           width: 3.5rem; }
-      main div#sections section:nth-of-type(2), main div#sections section:nth-of-type(3), main div#sections section:nth-of-type(5), main div#sections section:nth-of-type(6), main div#sections section:nth-of-type(8), main div#sections section:nth-of-type(9) {
-        background-color: #ff000064;
+      main div#sections section:nth-of-type(2), main div#sections section:nth-of-type(3), main div#sections section:nth-of-type(5), main div#sections section:nth-of-type(6), main div#sections section:nth-of-type(7), main div#sections section:nth-of-type(10) {
         position: relative; }
-        main div#sections section:nth-of-type(2) h2, main div#sections section:nth-of-type(3) h2, main div#sections section:nth-of-type(5) h2, main div#sections section:nth-of-type(6) h2, main div#sections section:nth-of-type(8) h2, main div#sections section:nth-of-type(9) h2 {
+        main div#sections section:nth-of-type(2) h2, main div#sections section:nth-of-type(3) h2, main div#sections section:nth-of-type(5) h2, main div#sections section:nth-of-type(6) h2, main div#sections section:nth-of-type(7) h2, main div#sections section:nth-of-type(10) h2 {
           font-size: 3rem;
           font-weight: 100;
           text-align: center; }
-        main div#sections section:nth-of-type(2) div.btn-container, main div#sections section:nth-of-type(3) div.btn-container, main div#sections section:nth-of-type(5) div.btn-container, main div#sections section:nth-of-type(6) div.btn-container, main div#sections section:nth-of-type(8) div.btn-container, main div#sections section:nth-of-type(9) div.btn-container {
+        main div#sections section:nth-of-type(2) div.btn-container, main div#sections section:nth-of-type(3) div.btn-container, main div#sections section:nth-of-type(5) div.btn-container, main div#sections section:nth-of-type(6) div.btn-container, main div#sections section:nth-of-type(7) div.btn-container, main div#sections section:nth-of-type(10) div.btn-container {
           position: absolute;
           left: 0;
-          flex-direction: column;
           justify-content: center; }
-          main div#sections section:nth-of-type(2) div.btn-container a.down i, main div#sections section:nth-of-type(3) div.btn-container a.down i, main div#sections section:nth-of-type(5) div.btn-container a.down i, main div#sections section:nth-of-type(6) div.btn-container a.down i, main div#sections section:nth-of-type(8) div.btn-container a.down i, main div#sections section:nth-of-type(9) div.btn-container a.down i {
+          main div#sections section:nth-of-type(2) div.btn-container a.down i, main div#sections section:nth-of-type(3) div.btn-container a.down i, main div#sections section:nth-of-type(5) div.btn-container a.down i, main div#sections section:nth-of-type(6) div.btn-container a.down i, main div#sections section:nth-of-type(7) div.btn-container a.down i, main div#sections section:nth-of-type(10) div.btn-container a.down i {
             color: #ffffff; }
+      main div#sections section:nth-of-type(3) div.btn-container, main div#sections section:nth-of-type(6) div.btn-container, main div#sections section:nth-of-type(9) div.btn-container {
+        left: 0; }
+
+/********************
+    FOOTER
+*********************/
+footer {
+  justify-content: flex-end;
+  padding: 2rem;
+  height: 89.5vh;
+  background: url(../img/footer-image.jpg);
+  background-size: cover;
+  background-position: 0 48.5%;
+  color: #ffffff93; }
+  footer div {
+    width: fit-content; }
+    footer div p {
+      text-transform: uppercase;
+      font-weight: 400; }
+    footer div div#social-links {
+      width: 90%;
+      justify-content: space-between;
+      padding: 0.75rem 0; }
+      footer div div#social-links a i {
+        color: #ffffff93;
+        font-size: 1.75rem; }
