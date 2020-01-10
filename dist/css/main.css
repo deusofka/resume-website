@@ -7,20 +7,19 @@
 header, main {
   max-width: 1280px;
   width: 90%;
-  margin: auto;
-  background-color: 15; }
+  margin: auto; }
 
-header nav, header nav ul {
+header nav, header nav ul, main div#sections section:nth-of-type(2) div.btn-container, main div#sections section:nth-of-type(3) div.btn-container, main div#sections section:nth-of-type(5) div.btn-container, main div#sections section:nth-of-type(6) div.btn-container, main div#sections section:nth-of-type(8) div.btn-container, main div#sections section:nth-of-type(9) div.btn-container {
   display: flex; }
 
-main {
+main div.centering-container, main div#sections section:nth-of-type(1), main div#sections section:nth-of-type(2), main div#sections section:nth-of-type(3), main div#sections section:nth-of-type(5), main div#sections section:nth-of-type(6), main div#sections section:nth-of-type(8), main div#sections section:nth-of-type(9) {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   align-content: center; }
 
-main {
+main div.centering-container, main div#sections section:nth-of-type(1), main div#sections section:nth-of-type(2), main div#sections section:nth-of-type(3), main div#sections section:nth-of-type(5), main div#sections section:nth-of-type(6), main div#sections section:nth-of-type(8), main div#sections section:nth-of-type(9) {
   display: flex; }
 
 /********************
@@ -36,8 +35,17 @@ body {
   background-color: #202020;
   color: #ffffff; }
 
+section:nth-of-type(2) a.down {
+  background-color: #ff000064; }
+
+section:nth-of-type(3) a.down {
+  background-color: #ff000064; }
+
 li {
   list-style: none; }
+
+p {
+  font-size: 1.4rem; }
 
 .btn {
   text-align: center;
@@ -45,32 +53,70 @@ li {
   width: 7rem;
   padding: 0.6rem 0;
   background-color: #ffffff; }
+  .btn.chevron i {
+    font-size: 1.5rem;
+    color: #202020; }
+  .btn.chevron.up {
+    transform: rotate(180deg); }
 
 /********************
     HEADER
 *********************/
-header nav {
-  padding: 1rem 0;
-  justify-content: space-between; }
-  header nav p#logo {
-    font-size: 2rem;
-    font-weight: 600; }
-  header nav ul {
-    width: 25rem;
-    justify-content: space-between;
-    align-items: center; }
-  header nav li p {
-    font-size: 1rem; }
+header {
+  position: sticky;
+  top: 0; }
+  header nav {
+    padding: 1rem 0;
+    justify-content: space-between; }
+    header nav p#logo {
+      font-size: 2rem;
+      font-weight: 700; }
+    header nav ul {
+      width: 25rem;
+      justify-content: space-between;
+      align-items: center; }
+    header nav li p {
+      font-size: 1rem; }
 
 /********************
     MAIN
 *********************/
 main {
-  height: 75vh; }
-  main h1 {
-    font-size: 3rem;
-    font-weight: 500;
-    margin-bottom: 1.5rem; }
-  main a i {
-    font-size: 1.5rem;
-    color: #202020; }
+  /********************
+    SECTIONS
+  *********************/ }
+  main div.centering-container {
+    height: 89.5vh; }
+    main div.centering-container div#showcase h1 {
+      font-size: 3rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem; }
+  main div#sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px; }
+    main div#sections section {
+      height: 89.5vh;
+      background-color: #262626;
+      /********************
+      SECTION 1
+      *********************/ }
+      main div#sections section:nth-of-type(1) {
+        color: #6f6f6f;
+        padding: 2rem; }
+        main div#sections section:nth-of-type(1) img {
+          width: 3.5rem; }
+      main div#sections section:nth-of-type(2), main div#sections section:nth-of-type(3), main div#sections section:nth-of-type(5), main div#sections section:nth-of-type(6), main div#sections section:nth-of-type(8), main div#sections section:nth-of-type(9) {
+        background-color: #ff000064;
+        position: relative; }
+        main div#sections section:nth-of-type(2) h2, main div#sections section:nth-of-type(3) h2, main div#sections section:nth-of-type(5) h2, main div#sections section:nth-of-type(6) h2, main div#sections section:nth-of-type(8) h2, main div#sections section:nth-of-type(9) h2 {
+          font-size: 3rem;
+          font-weight: 100;
+          text-align: center; }
+        main div#sections section:nth-of-type(2) div.btn-container, main div#sections section:nth-of-type(3) div.btn-container, main div#sections section:nth-of-type(5) div.btn-container, main div#sections section:nth-of-type(6) div.btn-container, main div#sections section:nth-of-type(8) div.btn-container, main div#sections section:nth-of-type(9) div.btn-container {
+          position: absolute;
+          left: 0;
+          flex-direction: column;
+          justify-content: center; }
+          main div#sections section:nth-of-type(2) div.btn-container a.down i, main div#sections section:nth-of-type(3) div.btn-container a.down i, main div#sections section:nth-of-type(5) div.btn-container a.down i, main div#sections section:nth-of-type(6) div.btn-container a.down i, main div#sections section:nth-of-type(8) div.btn-container a.down i, main div#sections section:nth-of-type(9) div.btn-container a.down i {
+            color: #ffffff; }

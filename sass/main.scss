@@ -9,13 +9,22 @@ $content-width: 1280px;
 $font-stack: "Dosis", sans-serif;
 $logo-size: 2rem;
 $nav-item-size: 1rem;
-$heading-size: 3rem;
+$heading-l: 3rem;
+$heading-m: 2rem;
+$txt-m: 1.4rem;
 $chevron-size: 1.5rem;
+
+// size
+$showcase-height: 89.5vh;
 
 // color
 $color-dark: #202020;
+$color-dark-secondary: #262626;
+$color-text: #6f6f6f;
 $color-light: #ffffff;
 
+$color-theme: #ff000064;
+$color-theme-btn: #ff000064;
 /********************
     EXTENDS
 *********************/
@@ -25,7 +34,6 @@ $color-light: #ffffff;
   max-width: $content-width;
   width: 90%;
   margin: auto;
-  background-color: 15;
 }
 
 //box
@@ -64,8 +72,25 @@ body {
   color: $color-light;
 }
 
+//Theme button colors
+section:nth-of-type(2) {
+  a.down {
+    background-color: $color-theme-btn;
+  }
+}
+section:nth-of-type(3) {
+  a.down {
+    background-color: $color-theme-btn;
+  }
+}
+
 li {
   list-style: none;
+}
+
+p {
+  font-size: $txt-m;
+  // line-height: 1rem;
 }
 
 .btn {
@@ -74,6 +99,17 @@ li {
   width: 7rem;
   padding: 0.6rem 0;
   background-color: $color-light;
+
+  &.chevron {
+    i {
+      font-size: $chevron-size;
+      color: $color-dark;
+    }
+
+    &.up {
+      transform: rotate(180deg);
+    }
+  }
 }
 
 /********************
@@ -81,6 +117,8 @@ li {
 *********************/
 header {
   @extend %content;
+  position: sticky;
+  top: 0;
   nav {
     padding: 1rem 0;
     @extend %box;
@@ -88,7 +126,7 @@ header {
 
     p#logo {
       font-size: $logo-size;
-      font-weight: 600;
+      font-weight: 700;
     }
     ul {
       width: 25rem;
@@ -109,18 +147,64 @@ header {
 *********************/
 main {
   @extend %content;
-  @extend %centering-box;
-  height: 75vh;
-  h1 {
-    font-size: $heading-size;
-    font-weight: 500;
-    margin-bottom: 1.5rem;
+  div.centering-container {
+    @extend %centering-box;
+    height: $showcase-height;
+    div#showcase {
+      h1 {
+        font-size: $heading-l;
+        font-weight: 500;
+        margin-bottom: 1.5rem;
+      }
+    }
   }
 
-  a {
-    i {
-      font-size: $chevron-size;
-      color: $color-dark;
+  /********************
+    SECTIONS
+  *********************/
+  div#sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+
+    section {
+      height: $showcase-height;
+      background-color: $color-dark-secondary;
+      /********************
+      SECTION 1
+      *********************/
+      &:nth-of-type(1) {
+        @extend %centering-box;
+        color: $color-text;
+        padding: 2rem;
+        img {
+          width: 3.5rem;
+        }
+      }
+      &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(5), &:nth-of-type(6), &:nth-of-type(8) , &:nth-of-type(9) {
+        background-color: $color-theme;
+        @extend %centering-box;
+        position: relative;
+        h2 {
+          font-size: $heading-l;
+          font-weight: 100;
+          text-align: center;
+        }
+
+        div.btn-container {
+          position: absolute;
+          left: 0;
+          @extend %box;
+          flex-direction: column;
+          justify-content: center;
+
+          a.down {
+            i {
+              color: $color-light;
+            }
+          }
+        }
+      }
     }
   }
 }
