@@ -9,6 +9,8 @@ $content-width: 1280px;
 $font-stack: "Dosis", sans-serif;
 $logo-size: 2rem;
 $nav-item-size: 1rem;
+$heading-size: 3rem;
+$chevron-size: 1.5rem;
 
 // color
 $color-dark: #202020;
@@ -23,11 +25,20 @@ $color-light: #ffffff;
   max-width: $content-width;
   width: 90%;
   margin: auto;
+  background-color: 15;
 }
 
 //box
 %box {
   display: flex;
+}
+
+%centering-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 %vertical-box {
@@ -57,6 +68,14 @@ li {
   list-style: none;
 }
 
+.btn {
+  text-align: center;
+  display: inline-block;
+  width: 7rem;
+  padding: 0.6rem 0;
+  background-color: $color-light;
+}
+
 /********************
     HEADER
 *********************/
@@ -69,7 +88,7 @@ header {
 
     p#logo {
       font-size: $logo-size;
-      font-weight: 700;
+      font-weight: 600;
     }
     ul {
       width: 25rem;
@@ -81,6 +100,27 @@ header {
       p {
         font-size: $nav-item-size;
       }
+    }
+  }
+}
+
+/********************
+    MAIN
+*********************/
+main {
+  @extend %content;
+  @extend %centering-box;
+  height: 75vh;
+  h1 {
+    font-size: $heading-size;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+
+  a {
+    i {
+      font-size: $chevron-size;
+      color: $color-dark;
     }
   }
 }
