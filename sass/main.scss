@@ -1,3 +1,86 @@
-h1 {
-    color: red;
+/********************
+    VARIABLES
+*********************/
+
+// content
+$content-width: 1280px;
+
+// font
+$font-stack: "Dosis", sans-serif;
+$logo-size: 2rem;
+$nav-item-size: 1rem;
+
+// color
+$color-dark: #202020;
+$color-light: #ffffff;
+
+/********************
+    EXTENDS
+*********************/
+
+//content
+%content {
+  max-width: $content-width;
+  width: 90%;
+  margin: auto;
+}
+
+//box
+%box {
+  display: flex;
+}
+
+%vertical-box {
+  display: flex;
+}
+
+%centering-box {
+  display: flex;
+}
+
+/********************
+    UTILITY
+*********************/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-stack;
+  background-color: $color-dark;
+  color: $color-light;
+}
+
+li {
+  list-style: none;
+}
+
+/********************
+    HEADER
+*********************/
+header {
+  @extend %content;
+  nav {
+    padding: 1rem 0;
+    @extend %box;
+    justify-content: space-between;
+
+    p#logo {
+      font-size: $logo-size;
+      font-weight: 700;
+    }
+    ul {
+      width: 25rem;
+      @extend %box;
+      justify-content: space-between;
+      align-items: center;
+    }
+    li {
+      p {
+        font-size: $nav-item-size;
+      }
+    }
+  }
 }

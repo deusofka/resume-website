@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "npx node-sass sass/ -o dist/css/ --recursive"
+    "sass": "npx node-sass --watch sass/ -o dist/css/ --recursive"
   },
   "keywords": [],
   "author": "Vimal Patel",

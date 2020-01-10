@@ -1,2 +1,45 @@
-h1 {
-  color: red; }
+/********************
+    VARIABLES
+*********************/
+/********************
+    EXTENDS
+*********************/
+header {
+  max-width: 1280px;
+  width: 90%;
+  margin: auto; }
+
+header nav, header nav ul {
+  display: flex; }
+
+/********************
+    UTILITY
+*********************/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Dosis", sans-serif;
+  background-color: #202020;
+  color: #ffffff; }
+
+li {
+  list-style: none; }
+
+/********************
+    HEADER
+*********************/
+header nav {
+  padding: 1rem 0;
+  justify-content: space-between; }
+  header nav p#logo {
+    font-size: 2rem;
+    font-weight: 700; }
+  header nav ul {
+    width: 25rem;
+    justify-content: space-between;
+    align-items: center; }
+  header nav li p {
+    font-size: 1rem; }
