@@ -78,6 +78,10 @@ body {
   color: $color-light;
 }
 
+a {
+  text-decoration: none;
+}
+
 li {
   list-style: none;
 }
@@ -119,9 +123,12 @@ header {
     @extend %box;
     justify-content: space-between;
 
-    p#logo {
-      font-size: $logo-size;
-      font-weight: 700;
+    a {
+      p#logo {
+        color: $color-light;
+        font-size: $logo-size;
+        font-weight: 700;
+      }
     }
     ul {
       width: 25rem;
@@ -130,8 +137,11 @@ header {
       align-items: center;
     }
     li {
-      p {
-        font-size: $nav-item-size;
+      a {
+        color: $color-light;
+        p {
+          font-size: $nav-item-size;
+        }
       }
     }
   }
@@ -144,7 +154,14 @@ main {
   @extend %content;
   div.centering-container {
     @extend %centering-box;
+<<<<<<< Updated upstream
     height: $showcase-height;
+||||||| merged common ancestors
+    @extend %content-height;
+
+=======
+    @extend %content-height;
+>>>>>>> Stashed changes
     div#showcase {
       h1 {
         font-size: $heading-l;
