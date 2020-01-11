@@ -2,21 +2,21 @@
     VARIABLES
 *********************/
 
-// content
+// size
 $content-width: 1280px;
+$showcase-height: 89.5vh;
+$skills-height: 122vh;
+$grid-gap: 10px;
 
 // font
 $font-stack: "Dosis", sans-serif;
-$logo-size: 2rem;
+$logo-size: 1.75rem;
 $footer-icon-size: 1.75rem;
 $nav-item-size: 1rem;
 $heading-l: 3rem;
 $heading-m: 2rem;
-$txt-m: 1.4rem;
+$txt-m: 1.25rem;
 $chevron-size: 1.5rem;
-
-// size
-$showcase-height: 89.5vh;
 
 // color
 $color-dark: #202020;
@@ -24,17 +24,19 @@ $color-dark-secondary: #262626;
 $color-text: #6f6f6f;
 $color-text-footer: #ffffff93;
 $color-light: #ffffff;
-
-$color-theme: #ff000064;
-$color-theme-btn: #ff000064;
-$color-theme-secondary: #00ff0046;
-$color-theme-btn-secondary: #00ff0046;
-$color-theme-tertiary: #0000ff74;
-$color-theme-btn-tertiary: #0000ff74;
-$color-theme-quarternary: #00ffce64;
-$color-theme-btn-quarternary: #00ffce64;
-$color-theme-quinary: #4500ff64;
-$color-theme-btn-quinary: #4500ff64;
+$color-theme: #ff000066;
+$color-theme-btn: #ff656545;
+$color-theme-secondary: #00ff004a;
+$color-theme-btn-secondary: #57ff5738;
+$color-theme-txt-secondary: #00ff0066;
+$color-theme-tertiary: #0000ff6b;
+$color-theme-btn-tertiary: #3c3cff73;
+$color-theme-quarternary: #00ffce66;
+$color-theme-btn-quarternary: #00ffce4c;
+$color-theme-txt-quarternary: #00ffce99;
+$color-theme-quinary: #4500ff66;
+$color-theme-btn-quinary: #6f39ff66;
+$color-theme-txt-quinary: #845def;
 /********************
     EXTENDS
 *********************/
@@ -42,7 +44,7 @@ $color-theme-btn-quinary: #4500ff64;
 //content
 %content {
   max-width: $content-width;
-  width: 90%;
+  width: 95%;
   margin: auto;
 }
 
@@ -84,10 +86,6 @@ a {
 
 li {
   list-style: none;
-}
-
-p {
-  font-size: $txt-m;
 }
 
 .btn {
@@ -152,9 +150,10 @@ header {
 *********************/
 main {
   @extend %content;
+
   div.centering-container {
     @extend %centering-box;
-    @extend %content-height;
+    height: $showcase-height;
     div#showcase {
       h1 {
         font-size: $heading-l;
@@ -170,64 +169,14 @@ main {
   div#sections {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 5px;
+    grid-gap: $grid-gap;
 
     section {
       height: $showcase-height;
 
-      //Theme colors
-      &:nth-of-type(1),
-      &:nth-of-type(4),
-      &:nth-of-type(5),
-      &:nth-of-type(8),
-      &:nth-of-type(9) {
-        background-color: $color-dark-secondary;
-        color: $color-text;
-      }
-      &:nth-of-type(2) {
-        background-color: $color-theme;
-        a.down {
-          background-color: $color-theme-btn;
-        }
-      }
-      &:nth-of-type(3) {
-        background-color: $color-theme-secondary;
-        a.down {
-          background-color: $color-theme-btn-secondary;
-        }
-      }
-      &:nth-of-type(6) {
-        background-color: $color-theme-tertiary;
-        a.down {
-          background-color: $color-theme-btn-tertiary;
-        }
-      }
-      &:nth-of-type(7) {
-        background-color: $color-theme-quarternary;
-        a.down {
-          background-color: $color-theme-btn-quarternary;
-        }
-      }
-      &:nth-of-type(10) {
-        background-color: $color-theme-quinary;
-        a.down {
-          background-color: $color-theme-btn-quinary;
-        }
-      }
-
-      /********************
-          ABOUT
-      *********************/
-      &:nth-of-type(1) {
-        @extend %centering-box;
-        padding: 2rem;
-        img {
-          width: 3.5rem;
-        }
-      }
+      //Head sections common
       &:nth-of-type(2),
       &:nth-of-type(3),
-      &:nth-of-type(5),
       &:nth-of-type(6),
       &:nth-of-type(7),
       &:nth-of-type(10) {
@@ -254,10 +203,141 @@ main {
       }
 
       &:nth-of-type(3),
-      &:nth-of-type(6),
-      &:nth-of-type(9) {
+      &:nth-of-type(7) {
         div.btn-container {
-          left: 0;
+          left: initial;
+          right: 0;
+        }
+      }
+
+      //Head sections specific
+      &:nth-of-type(2) {
+        background-color: $color-theme;
+        a.down {
+          background-color: $color-theme-btn;
+        }
+      }
+      &:nth-of-type(3) {
+        background-color: $color-theme-secondary;
+        a.down {
+          background-color: $color-theme-btn-secondary;
+        }
+      }
+      &:nth-of-type(6) {
+        background-color: $color-theme-tertiary;
+        a.down {
+          background-color: $color-theme-btn-tertiary;
+        }
+      }
+      &:nth-of-type(7) {
+        height: $skills-height;
+        background-color: $color-theme-quarternary;
+        a.down {
+          background-color: $color-theme-btn-quarternary;
+        }
+      }
+      &:nth-of-type(10) {
+        background-color: $color-theme-quinary;
+        a.down {
+          background-color: $color-theme-btn-quinary;
+        }
+      }
+
+      //Body sections common
+      &:nth-of-type(1),
+      &:nth-of-type(4),
+      &:nth-of-type(5),
+      &:nth-of-type(8),
+      &:nth-of-type(9) {
+        display: grid;
+        grid-gap: $grid-gap;
+        color: $color-text;
+        div.card {
+          @extend %vertical-box;
+          justify-content: center;
+          width: 100%;
+          padding-left: 2rem;
+          padding-right: 1rem;
+          background-color: $color-dark-secondary;
+
+          h3,
+          p {
+            font-size: $txt-m;
+            font-weight: 400;
+          }
+
+          h3.heading-theme {
+            color: $color-theme-txt-secondary;
+            margin-bottom: 0.25rem;
+          }
+
+          h3.heading-highlight {
+            color: $color-light;
+          }
+
+          p {
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+
+      //Body section: About
+      &:nth-of-type(1) {
+        img {
+          width: 3.5rem;
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      //Body section: Career
+      &:nth-of-type(4) {
+        grid-template-rows: 2fr 3fr;
+      }
+
+      //Body section: Skills
+      &:nth-of-type(8) {
+        height: $skills-height;
+        background-color: $color-dark-secondary;
+        div.card {
+          padding-right: 2rem;
+          width: 85%;
+          margin: auto;
+          div.skills:not(:last-of-type) {
+            padding-bottom: 7px;
+            margin-bottom: 14px;
+            border-bottom: solid #707070 1px;
+          }
+
+          div.skills {
+            h3.heading-theme {
+              color: $color-theme-txt-quarternary;
+            }
+
+            div.skill {
+              @extend %box;
+              justify-content: space-between;
+
+              div.stars {
+                i:not(.off) {
+                  color: #ff9300a1;
+                }
+
+                i.off {
+                  color: #6f6f6f73;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      //Body section: Achievements
+      &:nth-of-type(9) {
+        margin-bottom: $grid-gap;
+        div.card {
+          h3.heading-theme {
+            color: $color-theme-txt-quinary;
+          }
         }
       }
     }
@@ -271,6 +351,7 @@ footer {
   @extend %content;
   @extend %vertical-box;
   justify-content: flex-end;
+  margin-bottom: $grid-gap;
   padding: 2rem;
   height: $showcase-height;
   background: url(../img/footer-image.jpg);
