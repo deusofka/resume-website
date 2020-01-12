@@ -20,6 +20,11 @@ main {
 
         div.btn-container {
           position: relative;
+          flex-direction: initial;
+
+          a.btn {
+            width: 3.5rem;
+          }
         }
       }
       /********************

@@ -19,7 +19,10 @@ main {
       font-size: 2rem;
       padding-bottom: 1rem; }
     main div#sections section article.section-head div.btn-container {
-      position: relative; }
+      position: relative;
+      flex-direction: initial; }
+      main div#sections section article.section-head div.btn-container a.btn {
+        width: 3.5rem; }
     main div#sections section article.section-body div.card {
       padding: 1rem 0.75rem 1rem 1rem; }
       main div#sections section article.section-body div.card h3,
