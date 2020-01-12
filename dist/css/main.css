@@ -2,6 +2,9 @@
     VARIABLES
 *********************/
 /********************
+    VARIABLES
+*********************/
+/********************
     EXTENDS
 *********************/
 header, main, footer {
@@ -69,12 +72,15 @@ header {
       font-weight: 700; }
     header nav ul {
       width: 25rem;
-      justify-content: space-between;
-      align-items: center; }
-    header nav li a {
-      color: #ffffff; }
-      header nav li a p {
-        font-size: 1rem; }
+      justify-content: space-between; }
+      header nav ul li a {
+        color: #ffffff; }
+        header nav ul li a p {
+          font-size: 1rem; }
+    header nav div.hamburger {
+      display: none; }
+    header nav div.overlay {
+      display: none; }
 
 /********************
     MAIN

@@ -1,4 +1,5 @@
 @import "variables";
+@import "extends";
 
 /********************
     UTILITY
@@ -67,15 +68,22 @@ header {
       width: 25rem;
       @extend %box;
       justify-content: space-between;
-      align-items: center;
-    }
-    li {
-      a {
-        color: $color-light;
-        p {
-          font-size: $nav-item-size;
+      li {
+        a {
+          color: $color-light;
+          p {
+            font-size: $nav-item-size;
+          }
         }
       }
+    }
+
+    div.hamburger {
+      display: none;
+    }
+
+    div.overlay {
+      display: none;
     }
   }
 }
