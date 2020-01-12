@@ -9,14 +9,14 @@ header, main, footer {
   width: 95%;
   margin: auto; }
 
-header nav, header nav ul, main div#sections section:nth-of-type(8) div.card div.skills div.skill, footer div div#social-links {
+header nav, header nav ul, main div#sections section:nth-of-type(4) article.section-body div.card div.skills div.skill, footer div div#social-links {
   display: flex; }
 
-main div.centering-container, main div#sections section:nth-of-type(2), main div#sections section:nth-of-type(3), main div#sections section:nth-of-type(6), main div#sections section:nth-of-type(7), main div#sections section:nth-of-type(10), main div#sections section:nth-of-type(2) div.btn-container, main div#sections section:nth-of-type(3) div.btn-container, main div#sections section:nth-of-type(6) div.btn-container, main div#sections section:nth-of-type(7) div.btn-container, main div#sections section:nth-of-type(10) div.btn-container, main div#sections section:nth-of-type(1) div.card, main div#sections section:nth-of-type(4) div.card, main div#sections section:nth-of-type(5) div.card, main div#sections section:nth-of-type(8) div.card, main div#sections section:nth-of-type(9) div.card, footer {
+main div.centering-container, main div#sections section article.section-head, main div#sections section article.section-head div.btn-container, main div#sections section article.section-body div.card, footer {
   display: flex;
   flex-direction: column; }
 
-main div.centering-container, main div#sections section:nth-of-type(2), main div#sections section:nth-of-type(3), main div#sections section:nth-of-type(6), main div#sections section:nth-of-type(7), main div#sections section:nth-of-type(10) {
+main div.centering-container, main div#sections section article.section-head {
   justify-content: center;
   align-items: center;
   align-content: center; }
@@ -91,98 +91,99 @@ main {
       margin-bottom: 1.5rem; }
   main div#sections {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     grid-gap: 10px; }
     main div#sections section {
-      height: 89.5vh; }
-      main div#sections section:nth-of-type(2), main div#sections section:nth-of-type(3), main div#sections section:nth-of-type(6), main div#sections section:nth-of-type(7), main div#sections section:nth-of-type(10) {
+      height: fit-content;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
+      /********************
+        SECTION HEAD
+      *********************/
+      /********************
+        SECTION BODY
+      *********************/ }
+      main div#sections section article.section-head {
         position: relative; }
-        main div#sections section:nth-of-type(2) h2, main div#sections section:nth-of-type(3) h2, main div#sections section:nth-of-type(6) h2, main div#sections section:nth-of-type(7) h2, main div#sections section:nth-of-type(10) h2 {
+        main div#sections section article.section-head h2 {
           font-size: 3rem;
           font-weight: 100;
           text-align: center; }
-        main div#sections section:nth-of-type(2) div.btn-container, main div#sections section:nth-of-type(3) div.btn-container, main div#sections section:nth-of-type(6) div.btn-container, main div#sections section:nth-of-type(7) div.btn-container, main div#sections section:nth-of-type(10) div.btn-container {
+        main div#sections section article.section-head div.btn-container {
           position: absolute;
           left: 0;
           justify-content: center; }
-          main div#sections section:nth-of-type(2) div.btn-container a.down i, main div#sections section:nth-of-type(3) div.btn-container a.down i, main div#sections section:nth-of-type(6) div.btn-container a.down i, main div#sections section:nth-of-type(7) div.btn-container a.down i, main div#sections section:nth-of-type(10) div.btn-container a.down i {
+          main div#sections section article.section-head div.btn-container a.down i {
             color: #ffffff; }
-      main div#sections section:nth-of-type(3) div.btn-container, main div#sections section:nth-of-type(7) div.btn-container {
+      main div#sections section:nth-of-type(2) article.section-head div.btn-container, main div#sections section:nth-of-type(4) article.section-head div.btn-container {
         left: initial;
         right: 0; }
-      main div#sections section:nth-of-type(2) {
+      main div#sections section:nth-of-type(1) article.section-head {
         background-color: #ff000066; }
-        main div#sections section:nth-of-type(2) a.down {
+        main div#sections section:nth-of-type(1) article.section-head a.down {
           background-color: #ff656545; }
-      main div#sections section:nth-of-type(3) {
+      main div#sections section:nth-of-type(2) article.section-head {
         background-color: #00ff004a; }
-        main div#sections section:nth-of-type(3) a.down {
+        main div#sections section:nth-of-type(2) article.section-head a.down {
           background-color: #57ff5738; }
-      main div#sections section:nth-of-type(6) {
+      main div#sections section:nth-of-type(3) article.section-head {
         background-color: #0000ff6b; }
-        main div#sections section:nth-of-type(6) a.down {
+        main div#sections section:nth-of-type(3) article.section-head a.down {
           background-color: #3c3cff73; }
-      main div#sections section:nth-of-type(7) {
-        height: 122vh;
+      main div#sections section:nth-of-type(4) article.section-head {
         background-color: #00ffce66; }
-        main div#sections section:nth-of-type(7) a.down {
+        main div#sections section:nth-of-type(4) article.section-head a.down {
           background-color: #00ffce4c; }
-      main div#sections section:nth-of-type(10) {
+      main div#sections section:nth-of-type(5) article.section-head {
         background-color: #4500ff66; }
-        main div#sections section:nth-of-type(10) a.down {
+        main div#sections section:nth-of-type(5) article.section-head a.down {
           background-color: #6f39ff66; }
-      main div#sections section:nth-of-type(1), main div#sections section:nth-of-type(4), main div#sections section:nth-of-type(5), main div#sections section:nth-of-type(8), main div#sections section:nth-of-type(9) {
+      main div#sections section article.section-body {
         display: grid;
         grid-gap: 10px;
         color: #6f6f6f; }
-        main div#sections section:nth-of-type(1) div.card, main div#sections section:nth-of-type(4) div.card, main div#sections section:nth-of-type(5) div.card, main div#sections section:nth-of-type(8) div.card, main div#sections section:nth-of-type(9) div.card {
+        main div#sections section article.section-body div.card {
           justify-content: center;
           width: 100%;
-          padding-left: 2rem;
-          padding-right: 1rem;
+          padding: 2rem 1rem 2rem 2rem;
           background-color: #262626; }
-          main div#sections section:nth-of-type(1) div.card h3,
-          main div#sections section:nth-of-type(1) div.card p, main div#sections section:nth-of-type(4) div.card h3,
-          main div#sections section:nth-of-type(4) div.card p, main div#sections section:nth-of-type(5) div.card h3,
-          main div#sections section:nth-of-type(5) div.card p, main div#sections section:nth-of-type(8) div.card h3,
-          main div#sections section:nth-of-type(8) div.card p, main div#sections section:nth-of-type(9) div.card h3,
-          main div#sections section:nth-of-type(9) div.card p {
+          main div#sections section article.section-body div.card h3,
+          main div#sections section article.section-body div.card p {
             font-size: 1.25rem;
             font-weight: 400; }
-          main div#sections section:nth-of-type(1) div.card h3.heading-theme, main div#sections section:nth-of-type(4) div.card h3.heading-theme, main div#sections section:nth-of-type(5) div.card h3.heading-theme, main div#sections section:nth-of-type(8) div.card h3.heading-theme, main div#sections section:nth-of-type(9) div.card h3.heading-theme {
+          main div#sections section article.section-body div.card h3.heading-theme {
             color: #00ff0066;
             margin-bottom: 0.25rem; }
-          main div#sections section:nth-of-type(1) div.card h3.heading-highlight, main div#sections section:nth-of-type(4) div.card h3.heading-highlight, main div#sections section:nth-of-type(5) div.card h3.heading-highlight, main div#sections section:nth-of-type(8) div.card h3.heading-highlight, main div#sections section:nth-of-type(9) div.card h3.heading-highlight {
+          main div#sections section article.section-body div.card h3.heading-highlight {
             color: #ffffff; }
-          main div#sections section:nth-of-type(1) div.card p, main div#sections section:nth-of-type(4) div.card p, main div#sections section:nth-of-type(5) div.card p, main div#sections section:nth-of-type(8) div.card p, main div#sections section:nth-of-type(9) div.card p {
+          main div#sections section article.section-body div.card p {
             margin-bottom: 0.5rem; }
-      main div#sections section:nth-of-type(1) img {
+      main div#sections section:nth-of-type(1) article.section-body img {
         width: 3.5rem;
         margin-bottom: 0.5rem; }
-      main div#sections section:nth-of-type(4) {
-        grid-template-rows: 2fr 3fr; }
-      main div#sections section:nth-of-type(8) {
-        height: 122vh;
+      main div#sections section:nth-of-type(2) article.section-body {
+        grid-template-rows: auto auto; }
+      main div#sections section:nth-of-type(4) article.section-body {
         background-color: #262626; }
-        main div#sections section:nth-of-type(8) div.card {
+        main div#sections section:nth-of-type(4) article.section-body div.card {
           padding-right: 2rem;
           width: 85%;
           margin: auto; }
-          main div#sections section:nth-of-type(8) div.card div.skills:not(:last-of-type) {
+          main div#sections section:nth-of-type(4) article.section-body div.card div.skills:not(:last-of-type) {
             padding-bottom: 7px;
             margin-bottom: 14px;
             border-bottom: solid #707070 1px; }
-          main div#sections section:nth-of-type(8) div.card div.skills h3.heading-theme {
+          main div#sections section:nth-of-type(4) article.section-body div.card div.skills h3.heading-theme {
             color: #00ffce99; }
-          main div#sections section:nth-of-type(8) div.card div.skills div.skill {
+          main div#sections section:nth-of-type(4) article.section-body div.card div.skills div.skill {
             justify-content: space-between; }
-            main div#sections section:nth-of-type(8) div.card div.skills div.skill div.stars i:not(.off) {
+            main div#sections section:nth-of-type(4) article.section-body div.card div.skills div.skill div.stars i:not(.off) {
               color: #ff9300a1; }
-            main div#sections section:nth-of-type(8) div.card div.skills div.skill div.stars i.off {
+            main div#sections section:nth-of-type(4) article.section-body div.card div.skills div.skill div.stars i.off {
               color: #6f6f6f73; }
-      main div#sections section:nth-of-type(9) {
+      main div#sections section:nth-of-type(5) {
         margin-bottom: 10px; }
-        main div#sections section:nth-of-type(9) div.card h3.heading-theme {
+        main div#sections section:nth-of-type(5) article.section-body div.card h3.heading-theme {
           color: #845def; }
 
 /********************

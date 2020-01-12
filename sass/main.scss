@@ -4,8 +4,8 @@
 
 // size
 $content-width: 1280px;
-$showcase-height: 89.5vh;
-$skills-height: 122vh;
+$showcase-height: fit-content;
+$header-footer-height: 89.5vh;
 $grid-gap: 10px;
 
 // font
@@ -153,7 +153,7 @@ main {
 
   div.centering-container {
     @extend %centering-box;
-    height: $showcase-height;
+    height: $header-footer-height;
     div#showcase {
       h1 {
         font-size: $heading-l;
@@ -168,18 +168,17 @@ main {
   *********************/
   div#sections {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     grid-gap: $grid-gap;
-
     section {
       height: $showcase-height;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: $grid-gap;
 
-      //Head sections common
-      &:nth-of-type(2),
-      &:nth-of-type(3),
-      &:nth-of-type(6),
-      &:nth-of-type(7),
-      &:nth-of-type(10) {
+      /********************
+        SECTION HEAD
+      *********************/
+      article.section-head {
         @extend %centering-box;
         position: relative;
         h2 {
@@ -202,53 +201,63 @@ main {
         }
       }
 
-      &:nth-of-type(3),
-      &:nth-of-type(7) {
-        div.btn-container {
-          left: initial;
-          right: 0;
+      // Section heads right buttons
+      &:nth-of-type(2),
+      &:nth-of-type(4) {
+        article.section-head {
+          div.btn-container {
+            left: initial;
+            right: 0;
+          }
         }
       }
 
-      //Head sections specific
+      //Section heads specific
+      &:nth-of-type(1) {
+        article.section-head {
+          background-color: $color-theme;
+          a.down {
+            background-color: $color-theme-btn;
+          }
+        }
+      }
       &:nth-of-type(2) {
-        background-color: $color-theme;
-        a.down {
-          background-color: $color-theme-btn;
+        article.section-head {
+          background-color: $color-theme-secondary;
+          a.down {
+            background-color: $color-theme-btn-secondary;
+          }
         }
       }
       &:nth-of-type(3) {
-        background-color: $color-theme-secondary;
-        a.down {
-          background-color: $color-theme-btn-secondary;
+        article.section-head {
+          background-color: $color-theme-tertiary;
+          a.down {
+            background-color: $color-theme-btn-tertiary;
+          }
         }
       }
-      &:nth-of-type(6) {
-        background-color: $color-theme-tertiary;
-        a.down {
-          background-color: $color-theme-btn-tertiary;
+      &:nth-of-type(4) {
+        article.section-head {
+          background-color: $color-theme-quarternary;
+          a.down {
+            background-color: $color-theme-btn-quarternary;
+          }
         }
       }
-      &:nth-of-type(7) {
-        height: $skills-height;
-        background-color: $color-theme-quarternary;
-        a.down {
-          background-color: $color-theme-btn-quarternary;
-        }
-      }
-      &:nth-of-type(10) {
-        background-color: $color-theme-quinary;
-        a.down {
-          background-color: $color-theme-btn-quinary;
+      &:nth-of-type(5) {
+        article.section-head {
+          background-color: $color-theme-quinary;
+          a.down {
+            background-color: $color-theme-btn-quinary;
+          }
         }
       }
 
-      //Body sections common
-      &:nth-of-type(1),
-      &:nth-of-type(4),
-      &:nth-of-type(5),
-      &:nth-of-type(8),
-      &:nth-of-type(9) {
+      /********************
+        SECTION BODY
+      *********************/
+      article.section-body {
         display: grid;
         grid-gap: $grid-gap;
         color: $color-text;
@@ -256,8 +265,7 @@ main {
           @extend %vertical-box;
           justify-content: center;
           width: 100%;
-          padding-left: 2rem;
-          padding-right: 1rem;
+          padding: 2rem 1rem 2rem 2rem;
           background-color: $color-dark-secondary;
 
           h3,
@@ -283,47 +291,52 @@ main {
 
       //Body section: About
       &:nth-of-type(1) {
-        img {
-          width: 3.5rem;
-          margin-bottom: 0.5rem;
+        article.section-body {
+          img {
+            width: 3.5rem;
+            margin-bottom: 0.5rem;
+          }
         }
       }
 
       //Body section: Career
-      &:nth-of-type(4) {
-        grid-template-rows: 2fr 3fr;
+      &:nth-of-type(2) {
+        article.section-body {
+          grid-template-rows: auto auto;
+        }
       }
 
       //Body section: Skills
-      &:nth-of-type(8) {
-        height: $skills-height;
-        background-color: $color-dark-secondary;
-        div.card {
-          padding-right: 2rem;
-          width: 85%;
-          margin: auto;
-          div.skills:not(:last-of-type) {
-            padding-bottom: 7px;
-            margin-bottom: 14px;
-            border-bottom: solid #707070 1px;
-          }
-
-          div.skills {
-            h3.heading-theme {
-              color: $color-theme-txt-quarternary;
+      &:nth-of-type(4) {
+        article.section-body {
+          background-color: $color-dark-secondary;
+          div.card {
+            padding-right: 2rem;
+            width: 85%;
+            margin: auto;
+            div.skills:not(:last-of-type) {
+              padding-bottom: 7px;
+              margin-bottom: 14px;
+              border-bottom: solid #707070 1px;
             }
 
-            div.skill {
-              @extend %box;
-              justify-content: space-between;
+            div.skills {
+              h3.heading-theme {
+                color: $color-theme-txt-quarternary;
+              }
 
-              div.stars {
-                i:not(.off) {
-                  color: #ff9300a1;
-                }
+              div.skill {
+                @extend %box;
+                justify-content: space-between;
 
-                i.off {
-                  color: #6f6f6f73;
+                div.stars {
+                  i:not(.off) {
+                    color: #ff9300a1;
+                  }
+
+                  i.off {
+                    color: #6f6f6f73;
+                  }
                 }
               }
             }
@@ -332,11 +345,13 @@ main {
       }
 
       //Body section: Achievements
-      &:nth-of-type(9) {
+      &:nth-of-type(5) {
         margin-bottom: $grid-gap;
-        div.card {
-          h3.heading-theme {
-            color: $color-theme-txt-quinary;
+        article.section-body {
+          div.card {
+            h3.heading-theme {
+              color: $color-theme-txt-quinary;
+            }
           }
         }
       }
@@ -353,7 +368,7 @@ footer {
   justify-content: flex-end;
   margin-bottom: $grid-gap;
   padding: 2rem;
-  height: $showcase-height;
+  height: $header-footer-height;
   background: url(../img/footer-image.jpg);
   background-size: cover;
   background-position: 0 48.5%;
