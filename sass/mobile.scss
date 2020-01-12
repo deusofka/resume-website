@@ -2,15 +2,6 @@
 
 header {
   nav {
-    // flex-direction: column !important;
-
-    a {
-      p#logo {
-        // text-align: center;
-        // padding-bottom:1rem;
-      }
-    }
-
     ul {
       display: none;
     }
@@ -41,7 +32,7 @@ header {
             }
           }
 
-          div.overlay {
+          & + div.overlay {
             div.sphere {
               width: 150vh;
               opacity: 0.9;

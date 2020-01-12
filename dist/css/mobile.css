@@ -27,7 +27,7 @@ header nav div.hamburger {
         top: 0px;
         background-color: #202020;
         transform: rotate(-270deg); }
-    header nav div.hamburger input:checked + label div.overlay div.sphere {
+    header nav div.hamburger input:checked + label + div.overlay div.sphere {
       width: 150vh;
       opacity: 0.9;
       height: 150vh; }
