@@ -37,15 +37,12 @@ header {
               width: 150vh;
               opacity: 0.9;
               height: 150vh;
-              a:active {
-              }
             }
           }
         }
       }
       label {
         margin-top: 0.5rem;
-        margin-right: 1rem;
         height: 1.25rem;
         width: 1.25rem;
         @extend %box;
