@@ -92,8 +92,8 @@ header {
         position: absolute;
         background-color: #ffffff;
         transition-property: all;
-        transition-duration: 1s;
-        transition-timing-function: cubic-bezier(1, 0, 0, 1);
+        transition-duration: 0.5s;
+        transition-timing-function: cubic-bezier(0, 0, 0, 1);
         width: 0;
         height: 0;
         border-radius: 50%; }
