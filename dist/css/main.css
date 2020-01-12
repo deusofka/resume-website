@@ -198,9 +198,8 @@ main {
           max-width: 635px;
           margin: auto; }
           main div#sections section:nth-of-type(4) article.section-body div.card div.skills:not(:last-of-type) {
-            padding-bottom: 7px;
-            margin-bottom: 14px;
-            border-bottom: solid #707070 1px; }
+            padding-bottom: 5px;
+            margin-bottom: 10px; }
           main div#sections section:nth-of-type(4) article.section-body div.card div.skills h3.heading-theme {
             color: #00ffce99; }
           main div#sections section:nth-of-type(4) article.section-body div.card div.skills div.skill {

@@ -285,9 +285,8 @@ main {
             max-width: $content-width/2 - $grid-gap/2;
             margin: auto;
             div.skills:not(:last-of-type) {
-              padding-bottom: 7px;
-              margin-bottom: 14px;
-              border-bottom: solid #707070 1px;
+              padding-bottom: 5px;
+              margin-bottom: 10px;
             }
 
             div.skills {
