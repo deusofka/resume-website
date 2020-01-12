@@ -1,0 +1,59 @@
+@import "variables";
+
+/********************
+    MAIN
+*********************/
+main {
+  /********************
+    SECTIONS
+  *********************/
+  div#sections {
+    section {
+      /********************
+        SECTION HEAD
+      *********************/
+      article.section-head {
+        h2 {
+          font-size: $heading-s;
+          padding-bottom: 1rem;
+        }
+
+        div.btn-container {
+          position: relative;
+        }
+      }
+      /********************
+        SECTION BODY
+      *********************/
+      article.section-body {
+        div.card {
+          padding: 0.75rem 0.5rem 0.75rem 0.75rem;
+          h3,
+          p {
+            font-size: $txt-s;
+          }
+        }
+      }
+
+      //Body section: Skills
+      &:nth-of-type(4) {
+        article.section-body {
+          div.card {
+            padding-left: 4vw;
+            padding-right: 4vw;
+
+            div.skills {
+              div.skill {
+                div.stars {
+                  i {
+                    font-size: $star-m;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

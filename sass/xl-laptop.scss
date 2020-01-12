@@ -1,0 +1,21 @@
+/********************
+    MAIN
+*********************/
+main {
+  /********************
+    SECTIONS
+  *********************/
+  div#sections {
+    section {
+      //Body section: Skills
+      &:nth-of-type(4) {
+        article.section-body {
+          div.card {
+            padding-left: 4.5vw;
+            padding-right: 4.5vw;
+          }
+        }
+      }
+    }
+  }
+}

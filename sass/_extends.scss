@@ -1,0 +1,28 @@
+@import "variables";
+/********************
+    EXTENDS
+*********************/
+
+//content
+%content {
+  max-width: $content-width;
+  width: 95%;
+  margin: auto;
+}
+
+//box
+%box {
+  display: flex;
+}
+
+%vertical-box {
+  display: flex;
+  flex-direction: column;
+}
+
+%centering-box {
+  @extend %vertical-box;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}

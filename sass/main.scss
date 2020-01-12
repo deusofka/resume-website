@@ -1,69 +1,4 @@
-/********************
-    VARIABLES
-*********************/
-
-// size
-$content-width: 1280px;
-$showcase-height: fit-content;
-$header-footer-height: 89.5vh;
-$grid-gap: 10px;
-
-// font
-$font-stack: "Dosis", sans-serif;
-$logo-size: 1.75rem;
-$footer-icon-size: 1.75rem;
-$nav-item-size: 1rem;
-$heading-l: 3rem;
-$heading-m: 2rem;
-$txt-m: 1.25rem;
-$chevron-size: 1.5rem;
-
-// color
-$color-dark: #202020;
-$color-dark-secondary: #262626;
-$color-text: #6f6f6f;
-$color-text-footer: #ffffff93;
-$color-light: #ffffff;
-$color-theme: #ff000066;
-$color-theme-btn: #ff656545;
-$color-theme-secondary: #00ff004a;
-$color-theme-btn-secondary: #57ff5738;
-$color-theme-txt-secondary: #00ff0066;
-$color-theme-tertiary: #0000ff6b;
-$color-theme-btn-tertiary: #3c3cff73;
-$color-theme-quarternary: #00ffce66;
-$color-theme-btn-quarternary: #00ffce4c;
-$color-theme-txt-quarternary: #00ffce99;
-$color-theme-quinary: #4500ff66;
-$color-theme-btn-quinary: #6f39ff66;
-$color-theme-txt-quinary: #845def;
-/********************
-    EXTENDS
-*********************/
-
-//content
-%content {
-  max-width: $content-width;
-  width: 95%;
-  margin: auto;
-}
-
-//box
-%box {
-  display: flex;
-}
-
-%vertical-box {
-  display: flex;
-  flex-direction: column;
-}
-
-%centering-box {
-  @extend %vertical-box;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-}
+@import "variables";
 
 /********************
     UTILITY
@@ -215,6 +150,7 @@ main {
       //Section heads specific
       &:nth-of-type(1) {
         article.section-head {
+          height: 45vw;
           background-color: $color-theme;
           a.down {
             background-color: $color-theme-btn;
@@ -265,12 +201,12 @@ main {
           @extend %vertical-box;
           justify-content: center;
           width: 100%;
-          padding: 2rem 1rem 2rem 2rem;
+          padding: 1.5rem 1rem 1.5rem 1.5rem;
           background-color: $color-dark-secondary;
 
           h3,
           p {
-            font-size: $txt-m;
+            font-size: $txt-l;
             font-weight: 400;
           }
 
@@ -311,8 +247,9 @@ main {
         article.section-body {
           background-color: $color-dark-secondary;
           div.card {
-            padding-right: 2rem;
-            width: 85%;
+            padding-right: 5vw;
+            padding-left: 5vw;
+            max-width: $content-width/2 - $grid-gap/2;
             margin: auto;
             div.skills:not(:last-of-type) {
               padding-bottom: 7px;

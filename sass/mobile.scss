@@ -1,0 +1,19 @@
+@import "extends";
+
+header {
+  nav {
+    flex-direction: column !important;
+
+    a {
+      p#logo {
+        text-align: center;
+        padding-bottom:1rem;
+      }
+
+      ul {
+        flex-wrap: wrap;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+/********************
+    VARIABLES
+*********************/
+/********************
+    MAIN
+*********************/
+main {
+  /********************
+    SECTIONS
+  *********************/ }
+  main div#sections section {
+    /********************
+        SECTION HEAD
+      *********************/
+    /********************
+        SECTION BODY
+      *********************/ }
+    main div#sections section article.section-head h2 {
+      font-size: 2.5rem;
+      font-weight: 100;
+      text-align: center; }
+    main div#sections section article.section-body div.card h3,
+    main div#sections section article.section-body div.card p {
+      font-size: 1.2rem; }
+    main div#sections section:nth-of-type(4) article.section-body div.card {
+      padding-left: 4vw;
+      padding-right: 4vw; }
+      main div#sections section:nth-of-type(4) article.section-body div.card div.skills div.skill div.stars i {
+        font-size: 0.85rem; }

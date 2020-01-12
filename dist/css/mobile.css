@@ -1,0 +1,14 @@
+/********************
+    VARIABLES
+*********************/
+/********************
+    EXTENDS
+*********************/
+header nav {
+  flex-direction: column !important; }
+  header nav a p#logo {
+    text-align: center;
+    padding-bottom: 1rem; }
+  header nav a ul {
+    flex-wrap: wrap;
+    width: 100%; }

@@ -119,6 +119,7 @@ main {
         left: initial;
         right: 0; }
       main div#sections section:nth-of-type(1) article.section-head {
+        height: 45vw;
         background-color: #ff000066; }
         main div#sections section:nth-of-type(1) article.section-head a.down {
           background-color: #ff656545; }
@@ -145,7 +146,7 @@ main {
         main div#sections section article.section-body div.card {
           justify-content: center;
           width: 100%;
-          padding: 2rem 1rem 2rem 2rem;
+          padding: 1.5rem 1rem 1.5rem 1.5rem;
           background-color: #262626; }
           main div#sections section article.section-body div.card h3,
           main div#sections section article.section-body div.card p {
@@ -166,8 +167,9 @@ main {
       main div#sections section:nth-of-type(4) article.section-body {
         background-color: #262626; }
         main div#sections section:nth-of-type(4) article.section-body div.card {
-          padding-right: 2rem;
-          width: 85%;
+          padding-right: 5vw;
+          padding-left: 5vw;
+          max-width: 635px;
           margin: auto; }
           main div#sections section:nth-of-type(4) article.section-body div.card div.skills:not(:last-of-type) {
             padding-bottom: 7px;
