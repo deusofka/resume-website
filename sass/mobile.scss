@@ -102,7 +102,7 @@ div.overlay {
   height: 100vh;
   div.sphere {
     @extend %centering-box;
-    opacity: 1;
+    opacity: 0.95;
     position: absolute;
     background-color: $color-light;
     transition-property: all;
