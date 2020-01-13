@@ -30,6 +30,7 @@ li {
   width: 7rem;
   padding: 0.6rem 0;
   background-color: $color-light;
+  @extend %btn-hover;
 
   &.chevron {
     i {

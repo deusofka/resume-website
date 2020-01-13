@@ -51,11 +51,33 @@
 }
 
 //hover
-%nav-hover {
+%hover {
   @extend %transition;
-  @extend %ease;
-  border-radius: 5px;
   &:hover {
     background-color: $color-hover;
+  }
+}
+
+%nav-hover {
+  @extend %hover;
+  @extend %ease;
+  border-radius: 5px;
+}
+
+%btn-hover {
+  @extend %hover;
+  @extend %ease;
+  &.chevron {
+    i {
+      @extend %transition;
+      @extend %ease;
+    }
+  }
+  &:hover {
+    &.chevron {
+      i {
+        color: $color-light;
+      }
+    }
   }
 }

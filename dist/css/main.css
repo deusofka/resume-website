@@ -24,18 +24,22 @@ main div.centering-container, main div#sections section article.section-head {
   align-items: center;
   align-content: center; }
 
-header nav a p#logo, header nav ul li {
+header nav a p#logo, header nav ul li, .btn, .chevron.btn i {
   transition-property: all;
   transition-duration: 0.5s;
   transition-timing-function: cubic-bezier(1, 0, 0, 1); }
 
-header nav a p#logo, header nav ul li {
+header nav a p#logo, header nav ul li, .btn, .chevron.btn i {
   transition-timing-function: ease-in-out; }
+
+header nav a p#logo:hover, header nav ul li:hover, .btn:hover {
+  background-color: #454545; }
 
 header nav a p#logo, header nav ul li {
   border-radius: 5px; }
-  header nav a p#logo:hover, header nav ul li:hover {
-    background-color: #454545; }
+
+.btn:hover.chevron i {
+  color: #ffffff; }
 
 /********************
     UTILITY
