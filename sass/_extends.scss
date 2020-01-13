@@ -26,3 +26,26 @@
   align-items: center;
   align-content: center;
 }
+
+//transition
+%transition {
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(1, 0, 0, 1);
+}
+
+%ease {
+  transition-timing-function: ease-in-out;
+}
+
+%slow {
+  transition-duration: 0.75s;
+}
+
+%fast {
+  transition-duration: 0.25s;
+}
+
+%test {
+  transition-duration: 2s;
+}

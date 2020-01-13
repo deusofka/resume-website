@@ -45,7 +45,9 @@ li {
 /********************
     OVERLAY
 ********************/
-input, label, div.overlay a {
+input,
+label,
+div.overlay a {
   display: none;
 }
 
@@ -73,8 +75,17 @@ header {
     ul {
       width: 25rem;
       @extend %box;
+      align-items: center;
       justify-content: space-between;
       li {
+        padding-bottom: 0.5rem;
+        border-bottom: transparent solid 2px;
+        @extend %transition;
+        @extend %ease;
+
+        &:hover {
+          border-bottom: $color-underline solid 2px;
+        }
         a {
           color: $color-light;
           p {

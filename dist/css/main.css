@@ -24,6 +24,14 @@ main div.centering-container, main div#sections section article.section-head {
   align-items: center;
   align-content: center; }
 
+header nav ul li {
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(1, 0, 0, 1); }
+
+header nav ul li {
+  transition-timing-function: ease-in-out; }
+
 /********************
     UTILITY
 *********************/
@@ -58,7 +66,9 @@ li {
 /********************
     OVERLAY
 ********************/
-input, label, div.overlay a {
+input,
+label,
+div.overlay a {
   display: none; }
 
 /********************
@@ -78,11 +88,17 @@ header {
       font-weight: 700; }
     header nav ul {
       width: 25rem;
+      align-items: center;
       justify-content: space-between; }
-      header nav ul li a {
-        color: #ffffff; }
-        header nav ul li a p {
-          font-size: 1rem; }
+      header nav ul li {
+        padding-bottom: 0.5rem;
+        border-bottom: transparent solid 2px; }
+        header nav ul li:hover {
+          border-bottom: #d4d4d4 solid 2px; }
+        header nav ul li a {
+          color: #ffffff; }
+          header nav ul li a p {
+            font-size: 1rem; }
 
 /********************
     MAIN
