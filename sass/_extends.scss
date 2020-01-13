@@ -54,7 +54,7 @@
 %nav-hover {
   @extend %transition;
   @extend %ease;
-  border-radius: 2px;
+  border-radius: 5px;
   &:hover {
     background-color: $color-hover;
   }
