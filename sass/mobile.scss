@@ -3,7 +3,10 @@
 /********************
     OVERLAY
 ********************/
-
+label,
+div.overlay a {
+  display: block;
+}
 /********************
     INPUT CHECKED
 ********************/
@@ -117,6 +120,10 @@ div.overlay {
       color: $color-light;
       font-size: $heading-s;
       font-weight: 100;
+
+      &:last-of-type {
+        // padding-bottom: 0;
+      }
     }
   }
 }

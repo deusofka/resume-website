@@ -56,6 +56,12 @@ li {
     transform: rotate(180deg); }
 
 /********************
+    OVERLAY
+********************/
+input, label, div.overlay a {
+  display: none; }
+
+/********************
     HEADER
 *********************/
 header {

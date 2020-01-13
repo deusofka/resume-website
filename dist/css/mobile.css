@@ -19,6 +19,10 @@ div.overlay, div.overlay div.sphere {
 /********************
     OVERLAY
 ********************/
+label,
+div.overlay a {
+  display: block; }
+
 /********************
     INPUT CHECKED
 ********************/

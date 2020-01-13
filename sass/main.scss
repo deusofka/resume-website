@@ -43,6 +43,13 @@ li {
   }
 }
 /********************
+    OVERLAY
+********************/
+input, label, div.overlay a {
+  display: none;
+}
+
+/********************
     HEADER
 *********************/
 header {
