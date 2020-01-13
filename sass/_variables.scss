@@ -26,10 +26,13 @@ $star-m: 0.75rem;
 // color
 $color-dark: #202020;
 $color-dark-secondary: #262626;
+$color-light: #ffffff;
+
+// text
 $color-text: #6f6f6f;
 $color-text-footer: #ffffff93;
-$color-light: #ffffff;
-$color-underline: #d4d4d4;
+
+// theme
 $color-theme: #ff000066;
 $color-theme-btn: #ff656545;
 $color-theme-secondary: #00ff004a;
@@ -43,3 +46,11 @@ $color-theme-txt-quarternary: #00ffce99;
 $color-theme-quinary: #4500ff66;
 $color-theme-btn-quinary: #6f39ff66;
 $color-theme-txt-quinary: #845def;
+
+// star
+$color-star-on: #ff9300a1;
+$color-star-off: #6f6f6f73;
+
+// hover
+$color-underline: #d4d4d4;
+$color-hover: #454545;

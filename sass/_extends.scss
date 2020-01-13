@@ -49,3 +49,13 @@
 %test {
   transition-duration: 2s;
 }
+
+//hover
+%nav-hover {
+  @extend %transition;
+  @extend %ease;
+  border-radius: 2px;
+  &:hover {
+    background-color: $color-hover;
+  }
+}

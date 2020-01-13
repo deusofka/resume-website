@@ -24,13 +24,18 @@ main div.centering-container, main div#sections section article.section-head {
   align-items: center;
   align-content: center; }
 
-header nav ul li {
+header nav a p#logo, header nav ul li {
   transition-property: all;
   transition-duration: 0.5s;
   transition-timing-function: cubic-bezier(1, 0, 0, 1); }
 
-header nav ul li {
+header nav a p#logo, header nav ul li {
   transition-timing-function: ease-in-out; }
+
+header nav a p#logo, header nav ul li {
+  border-radius: 2px; }
+  header nav a p#logo:hover, header nav ul li:hover {
+    background-color: #454545; }
 
 /********************
     UTILITY
@@ -80,21 +85,19 @@ header {
   z-index: 10;
   background-color: #202020; }
   header nav {
-    padding: 1rem 0;
+    padding: 0.75rem 0;
     justify-content: space-between; }
     header nav a p#logo {
       color: #ffffff;
       font-size: 1.75rem;
-      font-weight: 700; }
+      font-weight: 700;
+      padding: 0.175rem 0.5rem; }
     header nav ul {
       width: 25rem;
       align-items: center;
       justify-content: space-between; }
       header nav ul li {
-        padding-bottom: 0.5rem;
-        border-bottom: transparent solid 2px; }
-        header nav ul li:hover {
-          border-bottom: #d4d4d4 solid 2px; }
+        padding: 0.66rem; }
         header nav ul li a {
           color: #ffffff; }
           header nav ul li a p {
