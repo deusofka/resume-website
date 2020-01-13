@@ -24,12 +24,12 @@ main div.centering-container, main div#sections section article.section-head {
   align-items: center;
   align-content: center; }
 
-header nav a p#logo, header nav ul li, .btn, .chevron.btn i {
+header nav a p#logo, header nav ul li, .btn, .btn i, main div#sections section article.section-head a.chevron, main div#sections section article.section-head a.chevron i {
   transition-property: all;
   transition-duration: 0.5s;
   transition-timing-function: cubic-bezier(1, 0, 0, 1); }
 
-header nav a p#logo, header nav ul li, .btn, .chevron.btn i {
+header nav a p#logo, header nav ul li {
   transition-timing-function: ease-in-out; }
 
 header nav a p#logo:hover, header nav ul li:hover, .btn:hover {
@@ -38,8 +38,17 @@ header nav a p#logo:hover, header nav ul li:hover, .btn:hover {
 header nav a p#logo, header nav ul li {
   border-radius: 5px; }
 
-.btn:hover.chevron i {
+.btn:hover i {
   color: #ffffff; }
+
+main div#sections section article.section-head a.chevron.up:hover {
+  background-color: #ffffff; }
+  main div#sections section article.section-head a.chevron.up:hover i {
+    color: #202020;
+    transform: rotate(360deg); }
+
+main div#sections section article.section-head a.chevron.down:hover i {
+  transform: rotate(360deg); }
 
 /********************
     UTILITY
@@ -66,10 +75,10 @@ li {
   width: 7rem;
   padding: 0.6rem 0;
   background-color: #ffffff; }
-  .btn.chevron i {
+  .btn i {
     font-size: 1.5rem;
     color: #202020; }
-  .btn.chevron.up {
+  .btn.up {
     transform: rotate(180deg); }
 
 /********************

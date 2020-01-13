@@ -64,19 +64,49 @@
   border-radius: 5px;
 }
 
-%btn-hover {
+%showcase-hover {
   @extend %hover;
-  @extend %ease;
-  &.chevron {
-    i {
-      @extend %transition;
-      @extend %ease;
-    }
+  i {
+    @extend %transition;
   }
   &:hover {
-    &.chevron {
+    i {
+      color: $color-light;
+    }
+  }
+}
+
+%section-hover {
+  article.section-head {
+    //Set transition
+    a.chevron {
+      @extend %transition;
       i {
-        color: $color-light;
+        @extend %transition;
+      }
+    }
+
+    // Set foreground
+    a.chevron.up:hover {
+      background-color: $color-light;
+      i {
+        color: $color-dark;
+        transform: rotate(360deg);
+      }
+    }
+
+    a.chevron.down:hover {
+      i {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  // Set background
+  &:nth-of-type(1) {
+    article.section-head {
+      a.chevron.down:hover {
+        // background-color: $color-theme-btn;
       }
     }
   }
