@@ -60,7 +60,6 @@ header {
   top: 0;
   z-index: 10;
   background-color: $color-dark;
-  // background-color: blue;
   nav {
     padding: 0.75rem 0;
     @extend %box;
@@ -78,12 +77,13 @@ header {
     ul {
       width: 25rem;
       @extend %box;
-      align-items: center;
       justify-content: space-between;
       li {
-        @extend %nav-hover;
-        padding: 0.66rem;
+        @extend %box;
+        align-items: center;
         a {
+          @extend %nav-hover;
+          padding: 0.66rem;
           color: $color-light;
           p {
             font-size: $nav-item-size;

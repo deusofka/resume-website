@@ -1,5 +1,5 @@
 // Add smooth scrolling without delay to links in the header
-$("header a").on("click", function(event) {
+$("header a, div.overlay a").on("click", function(event) {
   // Make sure this.hash has a value before overriding default behavior
   if (this.hash !== "") {
     // Prevent default anchor click behavior
@@ -23,18 +23,10 @@ $("header a").on("click", function(event) {
   } // End if
 });
 
-// Add smooth scrolling with delay to links in the main element
 $("main a").on("click", function(event) {
-  // Make sure this.hash has a value before overriding default behavior
   if (this.hash !== "") {
-    // Prevent default anchor click behavior
     event.preventDefault();
-
-    // Store hash
     var hash = this.hash;
-
-    // Using jQuery's animate() method to add smooth page scroll
-    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
     $("html, body")
       .delay(250)
       .animate(
@@ -42,10 +34,7 @@ $("main a").on("click", function(event) {
           scrollTop: $(hash).offset().top - 66
         },
         800,
-        function() {
-          // Add hash (#) to URL when done scrolling (default click behavior)
-          // window.location.hash = hash;
-        }
+        function() {}
       );
-  } // End if
+  }
 });

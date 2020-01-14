@@ -12,7 +12,7 @@ header, main, footer {
   width: 95%;
   margin: auto; }
 
-header nav, header nav ul, main div#sections section:nth-of-type(4) article.section-body div.card div.skills div.skill, footer div div#social-links {
+header nav, header nav ul, header nav ul li, main div#sections section:nth-of-type(4) article.section-body div.card div.skills div.skill, footer div div#social-links {
   display: flex; }
 
 main div.centering-container, main div#sections section article.section-head, main div#sections section article.section-head div.btn-container, main div#sections section article.section-body div.card, footer {
@@ -24,20 +24,20 @@ main div.centering-container, main div#sections section article.section-head {
   align-items: center;
   align-content: center; }
 
-header nav a p#logo, header nav ul li, .btn, .btn i, main div#sections section article.section-head a.chevron, main div#sections section article.section-head a.chevron i {
+header nav a p#logo, header nav ul li a, .btn, .btn i, main div#sections section article.section-head a.chevron, main div#sections section article.section-head a.chevron i {
   transition-property: all;
   transition-duration: 0.5s;
   transition-timing-function: cubic-bezier(1, 0, 0, 1); }
 
-header nav a p#logo, header nav ul li {
+header nav a p#logo, header nav ul li a {
   transition-timing-function: ease-in-out; }
 
 .btn, .btn i, main div#sections section article.section-head a.chevron, main div#sections section article.section-head a.chevron i {
   transition-duration: 0.25s; }
 
-header nav a p#logo, header nav ul li {
+header nav a p#logo, header nav ul li a {
   border-radius: 5px; }
-  header nav a p#logo:hover, header nav ul li:hover {
+  header nav a p#logo:hover, header nav ul li a:hover {
     background-color: #454545; }
 
 .btn:hover {
@@ -106,11 +106,11 @@ header {
       padding: 0.175rem 0.5rem; }
     header nav ul {
       width: 25rem;
-      align-items: center;
       justify-content: space-between; }
       header nav ul li {
-        padding: 0.66rem; }
+        align-items: center; }
         header nav ul li a {
+          padding: 0.66rem;
           color: #ffffff; }
           header nav ul li a p {
             font-size: 1rem; }
