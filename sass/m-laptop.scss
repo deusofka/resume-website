@@ -1,5 +1,12 @@
 @import "variables";
 
+// Set foreground
+a.chevron.up:hover {
+  transform: rotate(180deg) scale(0.9) translateX(-3px) !important;
+}
+a.chevron.down:hover {
+  transform: scale(0.9) translateX(-3px) !important;
+}
 /********************
     MAIN
 *********************/

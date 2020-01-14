@@ -53,15 +53,15 @@
 //hover
 %hover {
   @extend %transition;
-  &:hover {
-    background-color: $color-hover;
-  }
 }
 
 %nav-hover {
   @extend %hover;
   @extend %ease;
   border-radius: 5px;
+  &:hover {
+    background-color: $color-hover;
+  }
 }
 
 %showcase-hover {
@@ -70,15 +70,12 @@
     @extend %transition;
   }
   &:hover {
-    i {
-      color: $color-light;
-    }
+    transform: scale(0.95);
   }
 }
 
 %section-hover {
   article.section-head {
-    //Set transition
     a.chevron {
       @extend %transition;
       i {
@@ -88,26 +85,11 @@
 
     // Set foreground
     a.chevron.up:hover {
-      background-color: $color-light;
-      i {
-        color: $color-dark;
-        transform: rotate(360deg);
-      }
+      transform: rotate(180deg) scale(0.9) translateY(-2px);
     }
 
     a.chevron.down:hover {
-      i {
-        transform: rotate(360deg);
-      }
-    }
-  }
-
-  // Set background
-  &:nth-of-type(1) {
-    article.section-head {
-      a.chevron.down:hover {
-        // background-color: $color-theme-btn;
-      }
+      transform: scale(0.9) translateY(-2px);
     }
   }
 }

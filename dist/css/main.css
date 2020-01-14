@@ -32,23 +32,19 @@ header nav a p#logo, header nav ul li, .btn, .btn i, main div#sections section a
 header nav a p#logo, header nav ul li {
   transition-timing-function: ease-in-out; }
 
-header nav a p#logo:hover, header nav ul li:hover, .btn:hover {
-  background-color: #454545; }
-
 header nav a p#logo, header nav ul li {
   border-radius: 5px; }
+  header nav a p#logo:hover, header nav ul li:hover {
+    background-color: #454545; }
 
-.btn:hover i {
-  color: #ffffff; }
+.btn:hover {
+  transform: scale(0.95); }
 
 main div#sections section article.section-head a.chevron.up:hover {
-  background-color: #ffffff; }
-  main div#sections section article.section-head a.chevron.up:hover i {
-    color: #202020;
-    transform: rotate(360deg); }
+  transform: rotate(180deg) scale(0.9) translateY(-2px); }
 
-main div#sections section article.section-head a.chevron.down:hover i {
-  transform: rotate(360deg); }
+main div#sections section article.section-head a.chevron.down:hover {
+  transform: scale(0.9) translateY(-2px); }
 
 /********************
     UTILITY
