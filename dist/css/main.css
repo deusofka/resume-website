@@ -213,12 +213,16 @@ main {
           margin-bottom: 10px; }
         main div#sections section:nth-of-type(4) article.section-body div.card div.skills h3.heading-theme {
           color: #00ffce99; }
+        main div#sections section:nth-of-type(4) article.section-body div.card div.skills h3.heading-highlight {
+          margin-bottom: 0.175rem; }
         main div#sections section:nth-of-type(4) article.section-body div.card div.skills div.skill {
           justify-content: space-between; }
-          main div#sections section:nth-of-type(4) article.section-body div.card div.skills div.skill div.stars i:not(.off) {
-            color: #ff9300a1; }
-          main div#sections section:nth-of-type(4) article.section-body div.card div.skills div.skill div.stars i.off {
-            color: #6f6f6f73; }
+          main div#sections section:nth-of-type(4) article.section-body div.card div.skills div.skill div.stars {
+            font-size: 0.95rem; }
+            main div#sections section:nth-of-type(4) article.section-body div.card div.skills div.skill div.stars i:not(.off) {
+              color: #ff9300a1; }
+            main div#sections section:nth-of-type(4) article.section-body div.card div.skills div.skill div.stars i.off {
+              color: #6f6f6f73; }
       main div#sections section:nth-of-type(5) {
         margin-bottom: 10px; }
         main div#sections section:nth-of-type(5) article.section-body div.card h3.heading-theme {

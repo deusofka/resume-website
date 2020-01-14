@@ -7,14 +7,14 @@ main {
       height: initial;
 
       article.section-head {
-        height: 90vw;
+        height: 45vw;
       }
       &:nth-of-type(1) {
         article.section-head {
-          height: 90vw;
+          height: 45vw;
         }
         article.section-body {
-          height: 90vw;
+          // height: 90vw;
         }
       }
       &:nth-of-type(1),

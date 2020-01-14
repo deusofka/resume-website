@@ -37,16 +37,21 @@ main {
 
       //Body section: Skills
       &:nth-of-type(4) {
+        grid-template-columns: auto;
+
+        article.section-head {
+          height: 45vw;
+        }
+
         article.section-body {
           div.card {
-            padding-left: 4vw;
-            padding-right: 4vw;
-
+            max-width: initial;
+            width: 100%;
             div.skills {
               div.skill {
                 div.stars {
                   i {
-                    font-size: $star-m;
+                    font-size: $star-s;
                   }
                 }
               }

@@ -274,12 +274,17 @@ main {
               h3.heading-theme {
                 color: $color-theme-txt-quarternary;
               }
+              h3.heading-highlight {
+                margin-bottom: 0.175rem;
+              }
 
               div.skill {
                 @extend %box;
                 justify-content: space-between;
 
                 div.stars {
+                  font-size: $star-l;
+
                   i:not(.off) {
                     color: $color-star-on;
                   }
