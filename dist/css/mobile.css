@@ -120,6 +120,16 @@ div.overlay {
       font-size: 1.25rem;
       font-weight: 400;
       margin-left: 2.5rem; }
+      div.overlay div.sphere a:nth-of-type(1) {
+        color: #ff000090; }
+      div.overlay div.sphere a:nth-of-type(2) {
+        color: #009e0090; }
+      div.overlay div.sphere a:nth-of-type(3) {
+        color: #0000d690; }
+      div.overlay div.sphere a:nth-of-type(4) {
+        color: #1dbdb0b4; }
+      div.overlay div.sphere a:nth-of-type(5) {
+        color: #5400da90; }
 
 /********************
     HEADER
