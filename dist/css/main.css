@@ -32,6 +32,9 @@ header nav a p#logo, header nav ul li, .btn, .btn i, main div#sections section a
 header nav a p#logo, header nav ul li {
   transition-timing-function: ease-in-out; }
 
+.btn, .btn i, main div#sections section article.section-head a.chevron, main div#sections section article.section-head a.chevron i {
+  transition-duration: 0.25s; }
+
 header nav a p#logo, header nav ul li {
   border-radius: 5px; }
   header nav a p#logo:hover, header nav ul li:hover {

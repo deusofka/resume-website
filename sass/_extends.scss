@@ -51,12 +51,9 @@
 }
 
 //hover
-%hover {
-  @extend %transition;
-}
 
 %nav-hover {
-  @extend %hover;
+  @extend %transition;
   @extend %ease;
   border-radius: 5px;
   &:hover {
@@ -65,9 +62,11 @@
 }
 
 %showcase-hover {
-  @extend %hover;
+  @extend %transition;
+  @extend %fast;
   i {
     @extend %transition;
+    @extend %fast;
   }
   &:hover {
     transform: scale(0.95);
@@ -78,8 +77,10 @@
   article.section-head {
     a.chevron {
       @extend %transition;
+      @extend %fast;
       i {
         @extend %transition;
+        @extend %fast;
       }
     }
 

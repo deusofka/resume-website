@@ -36,7 +36,7 @@ $("main a").on("click", function(event) {
     // Using jQuery's animate() method to add smooth page scroll
     // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
     $("html, body")
-      .delay(400)
+      .delay(250)
       .animate(
         {
           scrollTop: $(hash).offset().top - 66
