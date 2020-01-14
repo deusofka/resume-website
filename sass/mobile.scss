@@ -34,7 +34,6 @@ input {
     div.sphere {
       width: 150vh;
       height: 150vh;
-      background-color: #202020bf;
       div.links-container {
         a {
           opacity: 1;
@@ -107,7 +106,7 @@ div.overlay {
   div.sphere {
     @extend %centering-box;
     position: absolute;
-    background-color: #ffffff40;
+    background-color: #454545bf;
     transition-property: all;
     transition-delay: 0.25s;
     transition-duration: 0.5s;
