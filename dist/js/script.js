@@ -28,7 +28,7 @@ $("main a").on("click", function(event) {
     event.preventDefault();
     var hash = this.hash;
     $("html, body")
-      .delay(250)
+      .delay(125)
       .animate(
         {
           scrollTop: $(hash).offset().top - 66
