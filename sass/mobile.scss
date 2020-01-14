@@ -14,17 +14,13 @@ input {
   display: none;
   &:checked + label {
     div.line {
-      background-color: $color-dark;
-
       transform: translateY(7px) rotate(45deg) scale(1.1);
       &:before {
         top: 0px;
-        background-color: $color-dark;
         transform: rotate(-0deg);
       }
       &:after {
         top: 0px;
-        background-color: $color-dark;
         transform: rotate(-270deg);
       }
     }
@@ -33,11 +29,15 @@ input {
   &:checked + label + div.overlay {
     z-index: 100;
     div.sphere {
+      background-color: $color-overlay;
       width: 150vh;
       height: 150vh;
-      a {
-        color: $color-dark;
-        opacity: 1;
+      opacity: 0.85;
+
+      div.links-container {
+        a {
+          opacity: 1;
+        }
       }
     }
   }
@@ -97,33 +97,35 @@ div.overlay {
   @extend %centering-box;
   left: 0;
   top: 0;
+  transition-property: all;
+  transition-delay: 0.25s;
+  transition-duration: 0.5s;
   z-index: -1;
   width: 100vw;
   height: 100vh;
   div.sphere {
     @extend %centering-box;
-    opacity: 0.9;
     position: absolute;
     background-color: $color-light;
+    opacity: 0.25;
     transition-property: all;
-    transition-duration: 0.25s;
+    transition-delay: 0.25s;
+    transition-duration: 0.5s;
     transition-timing-function: cubic-bezier(0, 0, 0, 1);
     width: 0;
     height: 0;
     border-radius: 50%;
     a {
       transition-property: all;
+      transition-delay: 0.25s;
       transition-duration: 0.125s;
       transition-timing-function: ease-in-out;
       opacity: 0;
-      padding: 2rem;
+      padding: 1rem;
       color: $color-light;
-      font-size: $heading-s;
-      font-weight: 100;
-
-      &:last-of-type {
-        // padding-bottom: 0;
-      }
+      font-size: $txt-l;
+      font-weight: 400;
+      margin-left: 2.5rem;
     }
   }
 }
