@@ -187,6 +187,8 @@ main {
           width: 100%;
           padding: 1.5rem 1rem 1.5rem 1.5rem;
           background-color: #262626; }
+          main div#sections section article.section-body div.card > div {
+            margin-top: 0.4rem; }
           main div#sections section article.section-body div.card h3,
           main div#sections section article.section-body div.card p {
             font-size: 1.25rem;
@@ -194,10 +196,22 @@ main {
           main div#sections section article.section-body div.card h3.heading-theme {
             color: #00ff0066;
             margin-bottom: 0.25rem; }
-          main div#sections section article.section-body div.card h3.heading-highlight {
+          main div#sections section article.section-body div.card .heading-highlight {
             color: #ffffff; }
-          main div#sections section article.section-body div.card p {
-            margin-bottom: 0.5rem; }
+          main div#sections section article.section-body div.card h3.heading-date {
+            font-style: italic; }
+          main div#sections section article.section-body div.card p.bullet-point {
+            position: relative;
+            margin-bottom: 0.25rem; }
+            main div#sections section article.section-body div.card p.bullet-point:before {
+              position: absolute;
+              content: "";
+              left: -1rem;
+              top: 0.8rem;
+              height: 0.3rem;
+              width: 0.3rem;
+              border-radius: 50%;
+              background-color: #6f6f6f; }
       main div#sections section:nth-of-type(1) article.section-body img {
         width: 3.5rem;
         margin-bottom: 0.5rem; }
