@@ -262,7 +262,10 @@ footer {
     footer div div#social-links {
       width: 90%;
       justify-content: space-between;
-      padding: 0.75rem 0; }
-      footer div div#social-links a i {
-        color: #ffffff93;
-        font-size: 1.75rem; }
+      padding: 0.5rem 0;
+      margin-left: 0.1rem; }
+      footer div div#social-links a {
+        margin-right: 0.5rem; }
+        footer div div#social-links a i {
+          color: #ffffff93;
+          font-size: 1.75rem; }

@@ -357,9 +357,11 @@ footer {
       @extend %box;
       width: 90%;
       justify-content: space-between;
-      padding: 0.75rem 0;
+      padding: 0.5rem 0;
+      margin-left: 0.1rem;
 
       a {
+        margin-right: 0.5rem;
         i {
           color: $color-text-footer;
           font-size: $footer-icon-size;
