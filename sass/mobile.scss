@@ -1,6 +1,38 @@
 @import "extends";
 
 /********************
+    MAIN
+*********************/
+main {
+  /********************
+    SECTIONS
+  *********************/
+  div#sections {
+    section {
+      /********************
+      SECTION HEAD
+      *********************/
+        //Body section: Projects
+        &:nth-of-type(3) {
+          article.section-body {
+            div#image-preview {
+              grid-template-columns: 1fr 1fr;
+              grid-template-rows: 1fr 1fr 1fr;
+              gap: 0px;
+              a {
+                background-image: url("../img/devConnector-preview.jpg");
+              }
+              img {
+                width: 100%;
+                height: auto;
+              }
+            }
+          }
+        }
+    }
+  }
+}
+/********************
     OVERLAY
 ********************/
 label,

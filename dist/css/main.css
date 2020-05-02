@@ -217,6 +217,16 @@ main {
         margin-bottom: 0.5rem; }
       main div#sections section:nth-of-type(2) article.section-body {
         grid-template-rows: auto auto; }
+      main div#sections section:nth-of-type(3) article.section-body div#image-preview {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0px; }
+        main div#sections section:nth-of-type(3) article.section-body div#image-preview a {
+          background-image: url("../img/devConnector-preview.jpg"); }
+        main div#sections section:nth-of-type(3) article.section-body div#image-preview img {
+          width: 100%;
+          height: auto; }
       main div#sections section:nth-of-type(4) article.section-body div.card {
         padding-right: 5vw;
         padding-left: 5vw;

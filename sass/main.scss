@@ -275,6 +275,25 @@ main {
         }
       }
 
+      //Body section: Projects
+      &:nth-of-type(3) {
+        article.section-body {
+          div#image-preview {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 0px;
+            a {
+              background-image: url("../img/devConnector-preview.jpg");
+            }
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+      }
+
       //Body section: Skills
       &:nth-of-type(4) {
         article.section-body {
